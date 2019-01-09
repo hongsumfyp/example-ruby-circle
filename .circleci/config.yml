@@ -3,11 +3,9 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     working_directory: ~/example-ruby-circle # directory where steps will run
     docker: # run the steps with Docker
-      - image: circleci/ruby:2.4.2-jessie-node 
+      - image: drecom/ubuntu-ruby:2.5.2 
       
     steps: # a collection of executable commands 
       - checkout      
-      - run: gem install json -v '1.8.3'
-      - run: bundle check || bundle install
       - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
     
