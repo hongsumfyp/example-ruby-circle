@@ -8,6 +8,6 @@ jobs: # a collection of steps
     steps: # a collection of executable commands 
       - checkout      
       - run: apt-get update
-      - run: apt-get install curl
+      - run: apt-get install curl -y
       - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
     
