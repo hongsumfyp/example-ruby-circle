@@ -3,7 +3,7 @@ jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     working_directory: ~/example-ruby-circle # directory where steps will run
     docker: # run the steps with Docker
-      - image: drecom/ubuntu-ruby:latest
+      - image: xqdocker/ubuntu-ruby:2.2
       
     steps: # a collection of executable commands 
       - checkout      
